@@ -2,10 +2,6 @@ import supertest, { Response } from 'supertest'
 import { app } from '../../server'
 import { prisma } from '../../utils/prisma'
 
-beforeEach(async () => {
-  await prisma.task.deleteMany()
-})
-
 describe('GET /api/v1/tasks', () => {
   beforeEach(async () => {
     await prisma.task.create({
