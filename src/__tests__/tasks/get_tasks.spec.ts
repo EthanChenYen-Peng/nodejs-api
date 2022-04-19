@@ -1,7 +1,8 @@
 import supertest, { Response } from 'supertest'
-import { app } from '../../server'
+import { createApp } from '../../server'
 import { prisma } from '../../utils/prisma'
 
+const app = createApp()
 describe('GET /api/v1/tasks', () => {
   beforeEach(async () => {
     await prisma.task.create({
