@@ -1,6 +1,8 @@
 import express, { Request, Response } from 'express'
+import { configureEnv } from './utils/configEnv'
 import taskRoutes from './routes/task.routes'
 
+configureEnv()
 const PORT = 3000
 export const app = express()
 
