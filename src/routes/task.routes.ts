@@ -9,4 +9,17 @@ router.get('/', async (req: Request, res: Response) => {
   res.json({ tasks })
 })
 
+router.post('/', async (req: Request, res: Response) => {
+  const title = req.body.title
+  const description = req.body.description
+  const task = await prisma.task.create({
+    data: {
+      title,
+      description,
+    },
+  })
+
+  res.status(201).json({ task })
+})
+
 export default router
