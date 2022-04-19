@@ -9,7 +9,8 @@
     "test": "NODE_ENV=test jest",
     "lint": "eslint --fix src/**/*.ts",
     "format": "prettier --write src/**/*.ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "migrate:test": "dotenv -e .env.test npx prisma migrate dev --name test"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "dotenv-cli": "^5.1.0",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.1.4",
