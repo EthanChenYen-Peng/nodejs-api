@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import taskRoutes from './routes/task.routes'
 
 const PORT = 3000
-const app = express()
+export const app = express()
 
 app.use('/api/v1/tasks', taskRoutes)
 app.get('/', (req: Request, res: Response) => {
