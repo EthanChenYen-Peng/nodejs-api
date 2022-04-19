@@ -17,4 +17,8 @@ describe('POST /api/v1/tasks', () => {
       expect(newTask).not.toBeNull()
     })
   })
+
+  describe('when title is not given', () => {
+    it.todo('returns with error')
+  })
 })
